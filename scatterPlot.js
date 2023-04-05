@@ -4,28 +4,27 @@ export function scatterPlot() {
 	const width = 920;
 	const height = 570;
 
-	const legend = d3
-		.select("#scatter-plot")
-		.append("g")
-		.attr("id", "legend")
-		.style("opacity", 0.9)
-		.style("position", "absolute")
-		.style("left", "850px")
-		.style("top", "260px")
-		.style("width", "210px")
-		.style("background-color", "white")
-		.style("border", "1px solid black")
-		.style("padding", "6px");
-
 	const tooltip = d3
 		.select("#scatter-plot")
 		.append("div")
 		.attr("id", "tooltip")
 		.style("opacity", 0);
 
+	const legend = d3
+		.select("#scatter-plot")
+		.append("div")
+		.attr("id", "legend")
+		.style("opacity", 0.9)
+		.style("position", "absolute")
+		.style("width", "210px")
+		.style("background-color", "white")
+		.style("border", "1px solid black")
+		.style("padding", "6px");
+
 	const svg = d3
 		.select("#scatter-plot")
 		.append("svg")
+		.attr("display", "block")
 		.attr("width", width)
 		.attr("height", height + 10);
 
